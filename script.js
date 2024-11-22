@@ -69,9 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function finalizeGame() {
-      const wins = results.history.filter(result => result === 'win').length;
-      const losses = results.history.filter(result => result === 'lose').length;
-
+      const wins = results.wins;
+      const losses = results.losses;
       if (wins > losses) {
           alert('¡Felicidades! Eres el ganador del juego.');
       } else if (losses > wins) {
